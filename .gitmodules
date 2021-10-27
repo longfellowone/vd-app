@@ -1,0 +1,3 @@
+[submodule "vd"]
+	path = vd
+	url = https://github.com/longfellowone/vd

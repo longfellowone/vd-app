@@ -1,0 +1,17 @@
+[package]
+name = "cloud-server"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+anyhow = "1.0"
+config = "0.11"
+actix-web = "4.0.0-beta.9"
+actix-cors = "0.6.0-beta.2"
+sqlx = { version = "0.5", features = ["runtime-actix-rustls", "postgres", "uuid", "migrate", "macros", "offline"] }
+uuid = { version = "0.8", features = ["serde", "v4"] }
+derive_more = "0.99"
+vd = { path = "../vd" }
