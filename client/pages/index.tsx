@@ -1,5 +1,6 @@
 import type { NextPage, GetServerSideProps } from 'next'
 import Head from 'next/head'
+import WireSizeOption from '../components/WireSizeOption'
 
 const Home: NextPage = () => {
   return (
@@ -8,7 +9,7 @@ const Home: NextPage = () => {
         <title>Index</title>
       </Head>
       <main>
-        <div>Index</div>
+        <WireSizeOption />
       </main>
     </>
   )
