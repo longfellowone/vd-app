@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+@layer base {
   @font-face {
     font-family: 'Inter var';
     font-style: normal;
@@ -11,4 +11,4 @@
     src: url('/fonts/Inter-roman.var.woff2') format('woff2');
     font-named-instance: 'Regular';
   }
-} */
+}
