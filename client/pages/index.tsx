@@ -2,7 +2,13 @@ import type { NextPage, GetServerSideProps } from 'next'
 import Head from 'next/head'
 import WireSizeOption from '../components/WireSizeOption'
 
-const Home: NextPage = () => {
+interface Props {
+  data?: string
+}
+
+const Home: NextPage<Props> = ({ data }) => {
+  console.log(data)
+
   return (
     <>
       <Head>
@@ -18,7 +24,8 @@ const Home: NextPage = () => {
 export default Home
 
 export const getServerSideProps: GetServerSideProps = async () => {
+  const data: string = 'data'
   return {
-    props: {},
+    props: { data },
   }
 }
