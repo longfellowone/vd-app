@@ -3,19 +3,21 @@ const WireSizeOption = () => {
     <div>
       <label
         htmlFor="location"
-        className="block text-sm font-medium text-gray-700"
+        // className="block text-sm font-medium text-gray-700"
       >
         Location
       </label>
       <select
         id="location"
         name="location"
-        className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+        // className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
         defaultValue="Canada"
       >
-        <option>United States</option>
-        <option>Canada</option>
-        <option>Mexico</option>
+        {Object.keys(WireSize).map((size) => (
+          <option key={size} value={size}>
+            {WireSize[size as keyof typeof WireSize]}
+          </option>
+        ))}
       </select>
     </div>
   )
@@ -46,6 +48,3 @@ enum WireSize {
   Awg750 = '750mcm',
   Awg1000 = '1000mcm',
 }
-
-// Object.values(WireSize).map((s) => console.log(s))
-// WireSize[enumKey as keyof typeof WireSize]
