@@ -16,7 +16,7 @@ const Home: NextPage<Props> = ({ data }) => {
         <title>Index</title>
       </Head>
       <main>
-        <div className="h-screen space-y-2 md:space-y-0 md:flex md:justify-around md:items-center">
+        <div className="bg-green-300 h-screen space-y-2 md:space-y-0 md:flex md:justify-around md:items-center">
           <MaxDistanceTable />
           <ConduitFillTable />
         </div>
